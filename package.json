@@ -1,0 +1,38 @@
+{
+  "name": "Rolobx-FFlag-Watcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --poll src/index.ts",
+    "build": "rimraf ./build && tsc -p .",
+    "start": "npm run build && node build/index.js",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "prettier-watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}"
+  },
+  "author": "LordMerc",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^3.0.3",
+    "onchange": "^7.1.0",
+    "prettier": "^2.8.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@octokit/core": "^5.1.0",
+    "axios": "^1.6.7",
+    "dayjs": "^1.11.10",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.1"
+  }
+}
