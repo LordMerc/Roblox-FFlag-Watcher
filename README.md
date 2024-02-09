@@ -5,7 +5,7 @@ npm i
 ```
 
 to install the dependencies
-Then run
+and then run
 
 ```javascript
 npm start
